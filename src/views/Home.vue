@@ -1,18 +1,37 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="box">
+      <Search />
+    </div>
+    <div class="spacer"></div>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Search from '@/components/Search.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Search,
+    Footer
   }
 }
 </script>
+
+<style scoped>
+  .home {
+    width: 100%;
+  }
+  .box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -68%);
+  }
+</style>
